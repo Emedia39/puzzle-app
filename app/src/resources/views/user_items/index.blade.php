@@ -8,8 +8,8 @@
 
 {{--アカウント文繰り返す※HTML版コメントアウト--}}
 <ul>
-    @foreach($user_items as $user_item)
-        <li>名前：{{$user_item['name']}} * パスワード：{{$user_item['password']}}</li>
+    @foreach($userItems as $userItem)
+        <li>ID:{{$userItem['id']}} *　ユーザー名：{{$userItem['user_id']}} *　ユーザー名：{{$userItem['item_id']}}</li>
     @endforeach
 </ul>
 

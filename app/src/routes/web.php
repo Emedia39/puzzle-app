@@ -23,4 +23,4 @@ Route::post('items/index', [ItemController::class, 'index']);
 Route::get('items/index', [UserController::class, 'index']);
 
 Route::post('user_items/index', [UserItemController::class, 'index']);
-Route::get('user_items/index', [UserController::class, 'index']);
+//Route::get('user_items/index', [UserController::class, 'index']);

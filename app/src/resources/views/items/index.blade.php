@@ -9,7 +9,7 @@
 {{--アカウント文繰り返す※HTML版コメントアウト--}}
 <ul>
     @foreach($items as $item)
-        <li>名前：{{$item['name']}}</li>
+        <li>ID:{{$item['id']}} *　アイテム名：{{$item['name']}} *　種類：{{$item['type']}} *　効果値：{{$item['detail']}}</li>
     @endforeach
 </ul>
 

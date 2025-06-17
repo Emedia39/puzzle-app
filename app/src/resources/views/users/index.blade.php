@@ -9,7 +9,10 @@
 {{--アカウント文繰り返す※HTML版コメントアウト--}}
 <ul>
     @foreach($users as $user)
-        <li>名前：{{$user['name']}} * パスワード：{{$user['password']}}</li>
+        <li>ID:{{$user['id']}} *　ユーザー名：{{$user['name']}} *　レベル：{{$user['level']}}
+            *　経験値：{{$user['experience']}}
+            *　
+        </li>
     @endforeach
 </ul>
 

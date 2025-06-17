@@ -15,16 +15,16 @@ class UserItemsTableSeeder extends Seeder
     {
         //
         UserItem::create([
-            'user_id' => 'user01',//ユーザー名と
-            'item_id' => 'medicine02',//ユーザーが所持しているアイテム名
+            'user_id' => 1,//ユーザー名と
+            'item_id' => 2,//ユーザーが所持しているアイテム名
         ]);
         UserItem::create([
-            'user_id' => 'user02',//ユーザー名と
-            'item_id' => 'medicine01',//ユーザーが所持しているアイテム名
+            'user_id' => 2,//ユーザー名と
+            'item_id' => 1,//ユーザーが所持しているアイテム名
         ]);
         UserItem::create([
-            'user_id' => 'user03',//ユーザー名と
-            'item_id' => 'drug01',//ユーザーが所持しているアイテム名
+            'user_id' => 3,//ユーザー名と
+            'item_id' => 3,//ユーザーが所持しているアイテム名
         ]);
     }
 }
