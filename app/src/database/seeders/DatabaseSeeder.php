@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use App\Models\Account;
 use App\Models\User;
+use App\Models\Item;
+
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -15,12 +17,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-        $this->call(AccountsTableSeeder::class);
+        //データベースでいうINSERT INTO　items、それをまとめてるところ
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        // User::factory(10)->create();
+
+        $this->call(AccountsTableSeeder::class);//管理者ログイン用アカウント
+        $this->call(ItemsTableSeeder::class);//ゲーム内アイテム
+        $this->call(UsersTableSeeder::class);//ゲーム内ユーザー
+        $this->call(UserItemsTableSeeder::class);//ゲーム内ユーザーが所持しているアイテム
+
     }
 }

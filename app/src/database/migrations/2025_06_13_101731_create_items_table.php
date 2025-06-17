@@ -10,9 +10,13 @@ return new class extends Migration {
      */
     public function up(): void
     {
+        //データベースでいうcreate table items
         Schema::create('items', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 20);
+            $table->string('name', 255);//アイテム名
+            $table->integer('type');//種類(int)
+            $table->integer('effect');//効果値(int)
+            $table->string('detail', 255);//詳細
             $table->timestamps();
         });
     }

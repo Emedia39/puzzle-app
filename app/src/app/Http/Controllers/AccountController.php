@@ -48,7 +48,9 @@ class AccountController extends Controller
 
         //テーブルの全てのレコードを取得
         $accounts = Account::All();
-        return view('accounts/index', ['accounts' => $accounts]);
+        //return view('accounts/index', ['accounts' => $date, 'title' => $title]);
+        return view('accounts/index', ['accounts' => $accounts, 'title' => $title]);
+        //accounts/indexに$accountsと$titleを送る
     }
 
     //一覧を返す
