@@ -55,3 +55,8 @@ select *
 from password_reset_tokens;#レコード全部表示
 select *
 from sessions;#レコード全部表示
+
+select *
+from stages;#レコード全部表示
+select *
+from stage_cells;#レコード全部表示

@@ -5,7 +5,8 @@ namespace Database\Seeders;
 use App\Models\Account;
 use App\Models\User;
 use App\Models\Item;
-
+use App\Models\StageCell;
+use App\Models\Stage;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -26,5 +27,7 @@ class DatabaseSeeder extends Seeder
         $this->call(UsersTableSeeder::class);//ゲーム内ユーザー
         $this->call(UserItemsTableSeeder::class);//ゲーム内ユーザーが所持しているアイテム
 
+        $this->call(StageCellsTableSeeder::class);//
+        $this->call(StagesTableSeeder::class);//
     }
 }

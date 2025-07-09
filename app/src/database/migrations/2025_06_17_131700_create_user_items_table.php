@@ -14,6 +14,7 @@ return new class extends Migration {
             $table->id();
             $table->integer('user_id');//IDのプレイヤー名
             $table->integer('item_id');//所持アイテム名
+            $table->integer('amount');//所持アイテム名
             $table->timestamps();
         });
     }

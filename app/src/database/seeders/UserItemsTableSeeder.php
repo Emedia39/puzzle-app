@@ -17,14 +17,17 @@ class UserItemsTableSeeder extends Seeder
         UserItem::create([
             'user_id' => 1,//ユーザー名と
             'item_id' => 2,//ユーザーが所持しているアイテム名
+            'amount' => 1 //個数
         ]);
         UserItem::create([
             'user_id' => 2,//ユーザー名と
             'item_id' => 1,//ユーザーが所持しているアイテム名
+            'amount' => 2 //個数
         ]);
         UserItem::create([
             'user_id' => 3,//ユーザー名と
             'item_id' => 3,//ユーザーが所持しているアイテム名
+            'amount' => 3 //個数
         ]);
     }
 }

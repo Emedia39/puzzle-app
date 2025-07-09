@@ -1,0 +1,8 @@
+### アイテム一覧取得(Level)
+GET  http://localhost:8000/api/items/index?name=medicine01
+Accept:  application/json
+
+### アイテム情報取得
+GET http://localhost:8000/api/items/1
+Accept: application/json
+
