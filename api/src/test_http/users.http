@@ -12,7 +12,9 @@ Content-Type: application/json
 Accept: application/json
 
 {
-    "name": "jobi"
+    "name": "eme",
+    "level": "0",
+    "experience": "0"
 }
 
 ### ユーザー更新
@@ -21,6 +23,20 @@ Content-Type: application/json
 Accept:  application/json
 
 {
-    "user_id": "id"
+    "user_id": 5,
+    "name": "jobi",
+    "level": 2,
+    "experience": 1
 }
 
+### ユーザー詳細情報更新
+POST  http://localhost:8000/api/user_detail/update
+Content-Type: application/json
+Accept:  application/json
+
+{
+    "user_id": 5,
+    "name": "jobi",
+    "level": 2,
+    "experience": 1
+}

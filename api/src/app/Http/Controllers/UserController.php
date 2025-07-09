@@ -45,10 +45,21 @@ class UserController extends Controller
     public function update(Request $request)
     {
         //[バリデーションチェック]
-        $user = User::findOrFail($request->user('id'));
-        $user->save();
+        $user = User::findOrFail($request->user_id);
+        //カラムを作成するときはこれ
+        /*'name' => $request->name,
+        'level' => $request->level,
+        'experience' => $request->experience*/
 
-        return response()->json();
+        //カラムの更新※jsonから情報を提示されているので、受け取る
+        $user->name = $request['name'];
+        $user->level = $request['level'];
+        $user->experience = $request['experience'];
+
+        $user->save();//送られてきたデータだけを更新してsave※削除は$user->delete();
+
+        return response()->json(['user_id' => $user->id]);
+        //return response()->json();//何も渡さない場合は [] になる
     }
 
 }

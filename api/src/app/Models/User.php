@@ -17,8 +17,11 @@ class User extends Authenticatable
      *
      * @var list<string>
      */
-    protected $fillable = [
-        'name',
+    protected $guarded = [
+        //$fillable//書いてあるもの以外固定
+        //$guarded//書いてあるものを固定
+        'id',//IDのみ固定
+        
     ];
 
     public function items()
