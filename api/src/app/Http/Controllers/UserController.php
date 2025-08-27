@@ -39,13 +39,20 @@ class UserController extends Controller
             'level' => $request->level,
             'experience' => $request->experience
         ]);
-        return response()->json(['user_id' => $user->id]);
+        //APIトークンを発行する
+        $token = $user->createToken($request->name)->plainTextToken;
+
+        //ユーザーIDとAPIトークンを返す
+        return response()->json(['user_id' => $user->id, 'token' => $token]);
+        //'user_id' => $user->id, 不要
     }
 
     public function update(Request $request)
     {
         //[バリデーションチェック]
-        $user = User::findOrFail($request->user_id);
+        //$user = User::findOrFail($request->user_id);
+        $user = User::findOrFail($request->user()->id);
+
         //カラムを作成するときはこれ
         /*'name' => $request->name,
         'level' => $request->level,

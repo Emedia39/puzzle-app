@@ -3,7 +3,7 @@ GET  http://localhost:8000/api/users/index?name=user01
 Accept:  application/json
 
 ### ユーザー情報取得
-GET http://localhost:8000/api/users/1
+GET http://localhost:8000/api/users/7
 Accept: application/json
 
 ### ユーザー登録
@@ -12,7 +12,7 @@ Content-Type: application/json
 Accept: application/json
 
 {
-    "name": "eme",
+    "name": "zzz",
     "level": "0",
     "experience": "0"
 }
@@ -27,6 +27,18 @@ Accept:  application/json
     "name": "jobi",
     "level": 2,
     "experience": 1
+}
+
+### ユーザー更新
+POST  http://localhost:8000/api/users/update
+Content-Type: application/json
+Accept:  application/json
+Authorization: Bearer 4|kkeRirTn8wI3WGVwcgOiySWglfU7fSJQ4Vm4Ljktb0a0a65e
+
+{
+    "name": "zzz",
+    "level": 111,
+    "experience": 222
 }
 
 ### ユーザー詳細情報更新
