@@ -1,0 +1,7 @@
+### ユーザーのクリア情報取得(Stage)
+GET  http://localhost:8000/api/user_degrees/index?user_degree=1
+Accept:  application/json
+
+### ユーザーのクリア情報取得
+GET http://localhost:8000/api/user_degrees/1
+Accept: application/json

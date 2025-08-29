@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Stage extends Model
+class Exp extends Model
 {
     use HasFactory;
 
@@ -16,7 +16,7 @@ class Stage extends Model
     //
     public function cells()
     {
-        return $this->hasMany(StageCell::class);
+        return $this->hasMany(ExpCell::class);
     }
 
 }

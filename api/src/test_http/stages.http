@@ -1,0 +1,7 @@
+### ステージ情報取得(Stage)
+GET  http://localhost:8000/api/stages/index?stage=1
+Accept:  application/json
+
+### ステージ情報取得
+GET http://localhost:8000/api/stages/1
+Accept: application/json

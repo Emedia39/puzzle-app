@@ -1,0 +1,7 @@
+### 実績情報取得(Exp)
+GET  http://localhost:8000/api/experiences/index?experience=1
+Accept:  application/json
+
+### 実績情報取得
+GET http://localhost:8000/api/exps/1
+Accept: application/json
